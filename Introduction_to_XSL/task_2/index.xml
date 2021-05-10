@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="#xsl"?>
+
+<root>
+
+    <графика ширина="640" высота="480">
+        <эллипс id="графика_1" заливка="rgba(255,0,0,0.5)" ободок="white" ширина-ободка="5" cx="206" cy="139" rx="100" ry="100" />
+        <эллипс id="графика_2" заливка="rgba(0,0,255,0.5)" ободок="white" ширина-ободка="5" cx="108" cy="111" rx="100" ry="100" />
+        <эллипс id="графика_3" заливка="rgba(0,255,0,0.5)" ободок="white" ширина-ободка="5" cx="134" cy="215" rx="100" ry="100" />
+    </графика>
+
+    <xsl:stylesheet version="1.0" id="xsl" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    
+        <xsl:template match="/">
+            <html>
+                <body style="display: flex; justify-content: center;">
+                    <xsl:apply-templates />
+                </body>
+            </html>
+        </xsl:template>
+
+        <xsl:template match="графика">
+            <svg width="{@ширина}" height="{@высота}">
+                <xsl:for-each select="эллипс">
+                    <ellipse id="{@id}" fill="{@заливка}" stroke="{@ободок}" stroke-width="{@ширина-ободка}" cx="{@cx}" cy="{@cy}" rx="{@rx}" ry="{@ry}" />
+                </xsl:for-each>
+            </svg>
+        </xsl:template>
+
+    </xsl:stylesheet>
+    
+</root>

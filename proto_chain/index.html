@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Лабораторная Proto_chain</title>
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="../index.html">Home</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							XSL
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="../Introduction_to_XSL/task_1/index.xml">Задание 1</a>
+							</li>
+							<li><a class="dropdown-item" href="../Introduction_to_XSL/task_2/index.xml">Задание 2</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../FUNC-007/index.html">Func-007</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Proto_chain</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../Fetch/index.html">Fetch</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid mt-3">
+		<div class="d-flex justify-content-around my-5">
+			<a href="https://kodaktor.ru/g/proto_chain"
+				class="nav-link justify-content-center d-flex btn btn-dark text-white">Ссылка на задание</a>
+			<a href="https://kodaktor.ru/____task_4db77"
+				class="nav-link justify-content-center d-flex btn btn-dark text-white">Ссылка на решение</a>
+		</div>
+		<div class="row">
+			<div class="col-6 justify-content-center d-flex">Скрипт:<br>
+				import o3 from '/j/protochain2';<br>
+				const protoName = [];<br>
+				let obj = o3;<br>
+				while (obj != null) {<br>
+				protoName.push(obj.name);<br>
+				obj = Object.getPrototypeOf(obj);<br>
+				}<br>
+				Out.log(protoName);
+			</div>
+			<div class="col-6 justify-content-center d-flex">Результат:<br>
+				ECMAScript,JavaScript,LiveScript,Mocha
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
+	</script>
+</body>
+
+</html>
